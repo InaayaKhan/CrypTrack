@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>CrypTrack</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+	</head>
+	<body style="background: #1A1D1F" class="d-flex flex-column h-100 container text-white">
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+				<div class="container">
+				  <a class="navbar-brand" href="views/dashboard">
+					<img src="images/Logo.png" alt="..." height="22">
+				  </a>
+				  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="add.html">Add Coin</a>
+						  </li>
+						
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">Holdings</a>
+						  </li>
+					  
+						  <li class="nav-item">
+							<a class="nav-link" aria-current="page" href="/users/logout">Logout</a>
+						</li>
+	
+					</ul>
+				  </div>
+				</div>
+			  </nav>
+		</header>
+
+
+
+ <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card bg-dark text-white card-body">
+        <h3 class="text-center">Edit Coin</h3>
+			<br>
+			<form onsubmit="return false;">
+				<input type="hidden" class="form-control" id="id">
+			  <div class="mb-3">
+				<label for="coin" class="form-label">Coin</label>
+				<input type="text" style="color: white;" class="form-control bg-dark" id="coin" autofocus>
+			  </div>
+			  <div class="mb-3">
+				<label for="quantity" class="form-label">Quantity</label>
+				<input type="text" style="color: white;" class="form-control bg-dark" id="quantity">
+			  </div>
+			  <div class="mb-3">
+				<label for="price" class="form-label">Price</label>
+				<input type="text" style="color: white;" class="form-control bg-dark" id="price">
+			  </div>
+			  <button class="btn btn-default text-white" style="background-color: #4e54c8" onclick="return putData()">Update</button>
+			  <a href="index.html" class="btn btn-default text-white"  style="background-color: #b51b60"">Cancel</a>
+			</form>
+      </div>
+    </div>              
+  </div>
+
+
+
+ 
+		<footer class="footer mt-auto py-3">
+		  <div class="container text-center">
+			<span class="text-muted">CrypTrack &copy; NoSQL Project TE IT A 05, 44, 65</span>
+		  </div>
+		</footer>
+	</body>
+	<script src="script.js"></script>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const id = urlParams.get('id');
+		getDataById(id);
+	</script>
+</html>

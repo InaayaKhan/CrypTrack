@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="/landpage.html">
+    <img src="/Logo.png" alt="..." height="22"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/users/login">Login</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="/users/register">Register</a>
+<!--           </li>
+      <li class="nav-item">
+      <a class="nav-link" href="add.html">Add New</a>
+      </li> -->
+    </ul>
+    </div>
+  </div>
+  </nav>
+
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card bg-dark text-white card-body">
+        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+        <%- include('partials/messages') %>
+        <form action="/users/login" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control  bg-dark"
+              placeholder="Enter Email"
+              style="color: white;"
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control  bg-dark"
+              placeholder="Enter Password"
+              style="color: white;"
+              
+            />
+          </div>
+          <br>
+          <button type="submit" class="btn text-white btn-block btn-default" style="background-color: #f041cb"><b>Login</b></button>
+        </form>
+        <p class=" mt-4">
+          No Account? <a href="/users/register">Register</a>
+        </p>
+      </div>
+    </div>              
+  </div>
+
+  <footer class="footer mt-auto py-3 fixed-bottom">
+    <div class="container text-center">
+    <span class="text-muted">CrypTrack &copy; NoSQL Project TE IT A 05, 44, 65</span>
+    </div>
+  </footer>
+
